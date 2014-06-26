@@ -1,0 +1,113 @@
+body {
+
+  margin:0px;
+
+  #navigation {
+    display: none;
+  }
+
+  // Hero Image.
+  #header-hero {
+    width:100%;
+    border: solid 1px #000;
+    height: 400px;
+  }
+
+}
+
+body.front {
+  #content {
+    @include outer-container;
+    .node-recipe {
+      @include span-columns(12);
+      margin:10px 0px;
+      text-align: center;
+
+      h2 {
+        a {
+          color: #333333;
+        }
+      }
+
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+
+@include media($small-mobile-width) {
+  body {
+    background-color: red;
+  }
+}
+
+@include media($medium-mobile-width) {
+  body.front {
+    background-color: pink;
+  }
+}
+
+@include media($large-mobile-width) {
+  body.front {
+    background-color: purple;
+    #navigation {
+      display: block;
+    }
+
+    #content {
+      @include outer-container;
+      .node-recipe {
+        @include span-columns(6);
+      }
+    }
+//
+  }
+}
+
+@include media($tablet-width) {
+  body.front {
+    background-color: blue;
+//    #navigation {
+//      display: block;
+//    }
+
+    #content {
+      @include outer-container;
+      .node-recipe {
+        @include span-columns(4);
+      }
+    }
+  }
+}
+
+@include media($desktop-width) {
+  body.front {
+    background-color: orange;
+//    #navigation {
+//      display: block;
+//    }
+
+    #content {
+      @include outer-container;
+      .node-recipe {
+        @include span-columns(3);
+      }
+    }
+  }
+}
+
+@include media($monitor-width) {
+  body.front {
+    background-color: green;
+  }
+}
+
+
+//$small-mobile-width: 320px;
+//$medium-mobile-width: 480px;
+//$large-mobile-width: 595px;
+//$tablet-width: 768px;
+//$desktop-width: 1024px;
+//$monitor-width: 1920px;

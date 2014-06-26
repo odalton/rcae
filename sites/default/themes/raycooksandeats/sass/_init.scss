@@ -104,10 +104,24 @@ $nav-height: 3em;
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
+// Breakpoints.
+$small-mobile-width: 320px;
+$medium-mobile-width: 480px;
+$large-mobile-width: 595px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$monitor-width: 1920px;
 
 // =============================================================================
 // Partials to be shared with all .scss files.
 // =============================================================================
+
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base"; //bitters folder
+//@import "bitters/bitters";
+//@import "font-awesome";
 
 // Add Compass' IE and vendor prefix support variables.
 @import "compass/support";
