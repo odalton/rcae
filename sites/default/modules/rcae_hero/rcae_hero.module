@@ -1,0 +1,49 @@
+<?php
+
+
+/**
+ * Implements hook_block_info().
+ */
+function rcae_hero_block_info() {
+
+  $blocks['hero'] = array(
+    'info' => t('RCAE Hero Image'),
+    'region' => 'header_hero',
+    'status' => TRUE,
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function rcae_hero_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'hero':
+      $block['subject'] = t('RCAE Hero Image Block');
+      $block['content'] = array(
+        '#theme' => 'rcae_hero_image_theme',
+        '#url' => 'rss.xml',
+        '#title' => t('Syndicate'),
+      );
+      break;
+  }
+  return $block;
+}
+
+
+function rcae_hero_theme($existing, $type, $theme, $path) {
+  return array(
+    'rcae_hero_image_theme' => array(
+      'template' => 'templates/rcae_hero_image',
+      'variables' => array(
+        'var_name'=> NULL
+      )
+    ),
+  );
+}

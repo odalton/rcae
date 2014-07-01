@@ -14,10 +14,12 @@
 
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
+Drupal.behaviors.rcae_hero_image = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    $("#header-hero").backstretch(Drupal.settings.rcae_hero_image.hero_image);
+
+//    $("#header-hero").css('background-image', 'url(' + Drupal.settings.rcae_hero_image.hero_image + ')');
 
   }
 };

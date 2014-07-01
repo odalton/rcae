@@ -2,6 +2,20 @@ body {
 
   margin:0px;
 
+  #header {
+    text-align: center;
+    #block-system-main-menu {
+      margin:0px;
+      ul {
+        li {
+          display: inline;
+          padding:5px 20px;
+        }
+      }
+    }
+
+  }
+
   #navigation {
     display: none;
   }
@@ -9,8 +23,10 @@ body {
   // Hero Image.
   #header-hero {
     width:100%;
-    border: solid 1px #000;
+//    border: solid 1px #000;
     height: 400px;
+//    background-attachment: fixed;
+//    background-size: 100% 100%;
   }
 
 }
@@ -36,22 +52,40 @@ body.front {
   }
 }
 
+body.node-type-recipe {
+  .title {
+    display: none;
+  }
+  .node {
+    .field-name-post-date,
+    .field-name-title {
+      text-align: center;
+    }
+
+    .field-name-title {
+      border-bottom:solid 1px #cccccc;
+      padding-bottom:20px;
+      margin-bottom:20px;
+    }
+  }
+}
+
 
 @include media($small-mobile-width) {
   body {
-    background-color: red;
+//    background-color: red;
   }
 }
 
 @include media($medium-mobile-width) {
   body.front {
-    background-color: pink;
+//    background-color: pink;
   }
 }
 
 @include media($large-mobile-width) {
   body.front {
-    background-color: purple;
+//    background-color: purple;
     #navigation {
       display: block;
     }
@@ -68,7 +102,7 @@ body.front {
 
 @include media($tablet-width) {
   body.front {
-    background-color: blue;
+//    background-color: blue;
 //    #navigation {
 //      display: block;
 //    }
@@ -84,7 +118,7 @@ body.front {
 
 @include media($desktop-width) {
   body.front {
-    background-color: orange;
+//    background-color: orange;
 //    #navigation {
 //      display: block;
 //    }
@@ -100,7 +134,7 @@ body.front {
 
 @include media($monitor-width) {
   body.front {
-    background-color: green;
+//    background-color: green;
   }
 }
 
